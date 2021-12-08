@@ -1,55 +1,36 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import "assets/stylesheets/application.scss";
 
-import Header from "./header"
-import "./layout.css"
+import Header from "components/Header";
+import Footer from "components/Footer";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children, pageName }) => {
+  let className = "";
+
+  if (pageName) {
+    className = `${className} page-${pageName}`;
+  }
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Helmet bodyAttributes={{ class: className }}>
+        <title>Gatsby Site</title>
+      </Helmet>
+      <div className="wrapper">
+        <Header />
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+  pageName: PropTypes.string,
+};
 
-export default Layout
+export default Layout;

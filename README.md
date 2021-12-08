@@ -1,105 +1,77 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# 🍃 Gatsby Leaflet Starter
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Jumpstart your next Gatsby mapping project with Leaflet!
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## ⚡ Quick Deploy
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/colbyfayock/gatsby-starter-leaflet) [![Deploy with Vercel Now](https://zeit.co/button)](https://vercel.com/import/project?template=https://github.com/colbyfayock/gatsby-starter-leaflet)
 
-## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+## 🧰 What This Includes
+* [Yarn](https://yarnpkg.com/en/)
+* [Gatsby](https://www.gatsbyjs.org/)
+* [Sass](https://sass-lang.com)
+* [React Helmet](https://github.com/nfl/react-helmet)
+* [Resolve Src](https://github.com/alampros/gatsby-plugin-resolve-src)
+* [Leaflet](https://leafletjs.com/)
+* [React Leaflet](https://react-leaflet.js.org)
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+## 🚀 Getting Started
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+### Requirements
+* [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli)
+* [Yarn](https://yarnpkg.com/en/)
 
-1.  **Start developing.**
+### Quick Start
+Run the following in your favorite terminal:
+```
+gatsby new my-map-app https://github.com/colbyfayock/gatsby-starter-leaflet
+```
 
-    Navigate into your new site’s directory and start it up.
+### Starting from Scratch
+* Set up Yarn: https://yarnpkg.com/lang/en/docs/install/#mac-stable)[https://yarnpkg.com/lang/en/docs/install/
+* Install the Gatsby CLI globally:
+```
+yarn global add gatsby-cli
+```
+* Inside the directory of your choice, scaffold a new Gatsby site:
+```
+gatsby new my-map-app https://github.com/colbyfayock/gatsby-starter-leaflet
+```
+For example, if I want my installation in `~/Code/new-gatsby-site`, I would navigate to `~/Code` and run:
+```
+gatsby new new-gatsby-site https://github.com/colbyfayock/gatsby-starter-leaflet
+```
+* Navigate to your new directory and run:
+```
+yarn develop
+```
+* You should now be running a new Gatsby site locally! 🎉
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+## 🗺 Resources to Learn About Mapping
+* [Mapping with React Leaflet](https://egghead.io/playlists/mapping-with-react-leaflet-e0e0?af=atzgap) (egghead.io)
+* [How to build a mapping app in React the easy way with Leaflet](https://www.freecodecamp.org/news/easily-spin-up-a-mapping-app-in-react-with-leaflet/) (freecodecamp.org)
+* [Anyone Can Map! Inspiration and an introduction to the world of mapping](https://www.colbyfayock.com/2020/03/anyone-can-map-inspiration-and-an-introduction-to-the-world-of-mapping/) (colbyfayock.com)
 
-1.  **Open the source code and start editing!**
+## Contributors ✨
 
-    Your site is now running at `http://localhost:8000`!
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://colbyfayock.com/newsletter"><img src="https://avatars2.githubusercontent.com/u/1045274?v=4" width="100px;" alt=""/><br /><sub><b>Colby Fayock</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-starter-leaflet/commits?author=colbyfayock" title="Code">💻</a> <a href="https://github.com/colbyfayock/gatsby-starter-leaflet/commits?author=colbyfayock" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://fuku710.info"><img src="https://avatars2.githubusercontent.com/u/13159978?v=4" width="100px;" alt=""/><br /><sub><b>Fukuda Naoto</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-starter-leaflet/commits?author=fuku710" title="Code">💻</a></td>
+    <td align="center"><a href="http://dynamicdigvijay@gmal.com"><img src="https://avatars0.githubusercontent.com/u/59700645?v=4" width="100px;" alt=""/><br /><sub><b>Digvijay Singh Rathore</b></sub></a><br /><a href="https://github.com/colbyfayock/gatsby-starter-leaflet/commits?author=digvijaysrathore" title="Code">💻</a></td>
+  </tr>
+</table>
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
