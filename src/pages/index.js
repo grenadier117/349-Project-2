@@ -10,6 +10,7 @@ import Layout from "components/Layout";
 import Container from "components/Container";
 import Map from "components/Map";
 import Snippet from "components/Snippet";
+import { CasesWrapper } from '../components/CurrentCasesMap';
 
 const LOCATION = {
   lat: 34.0522,
@@ -176,6 +177,7 @@ const IndexPage = () => {
   <Container type="content" className="text-center home-start"> 
     <h3>It has  covid stats via markers on our map, and stas shown in a dashboard... lots of fun!</h3>
     </Container>
+    <CasesWrapper />
   </Layout>
   );
 };

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_HOST = 'https://corona.lmao.ninja/v2';
+const API_HOST = 'https://disease.sh/v3/covid-19';
 
 const ENDPOINTS = [
   {
@@ -12,6 +12,10 @@ const ENDPOINTS = [
   {
     id: 'countries',
     path: '/countries'
+  },
+  {
+    id: 'historical',
+    path: '/historical'
   }
 ]
 
@@ -20,7 +24,7 @@ const defaultState = {
   state: 'ready'
 }
 
-const useTracker = ({ api = 'all' }) => {
+const useTracker = ({ api = 'all', additionalParams = '' }) => {
 
   const [tracker = {}, updateTracker] = useState(defaultState)
 
@@ -40,7 +44,7 @@ const useTracker = ({ api = 'all' }) => {
           state: 'loading'
         }
       });
-      response = await axios.get(`${API_HOST}${route.path}`);
+      response = await axios.get(`${API_HOST}${route.path}${additionalParams}`);
     } catch(e) {
       updateTracker((prev) => {
         return {
@@ -66,7 +70,7 @@ const useTracker = ({ api = 'all' }) => {
 
   useEffect(() => {
     fetchTracker()
-  }, [api])
+  }, [api, additionalParams])
 
   return {
     fetchTracker,
