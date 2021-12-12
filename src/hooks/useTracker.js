@@ -24,8 +24,7 @@ const defaultState = {
   state: 'ready'
 }
 
-const useTracker = ({ api = 'all', additionalParams = '' }) => {
-
+const useTracker = ({ api = 'all', additionalParams = '', refresh = false }) => {
   const [tracker = {}, updateTracker] = useState(defaultState)
 
   async function fetchTracker() {
@@ -70,7 +69,7 @@ const useTracker = ({ api = 'all', additionalParams = '' }) => {
 
   useEffect(() => {
     fetchTracker()
-  }, [api, additionalParams])
+  }, [api, additionalParams, refresh])
 
   return {
     fetchTracker,

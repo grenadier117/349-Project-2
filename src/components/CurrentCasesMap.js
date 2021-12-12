@@ -28,10 +28,10 @@ ChartJS.register(
   Legend
 )
 
-export const CurrentCasesMap = ({ country }) => {
+export const CurrentCasesMap = ({ country, refresh }) => {
 
-  const { data } = useTracker({ api: 'historical', additionalParams: country ? `/${country}?lastdays=30` : '/all' });
-  const { data: countries = [] } = useTracker({ api: 'countries' });
+  const { data } = useTracker({ api: 'historical', refresh: refresh, additionalParams: country ? `/${country}?lastdays=30` : '/all' });
+  const { data: countries = [] } = useTracker({ api: 'countries', refresh: refresh });
   const [totalCaseData, setTotalCaseData] = React.useState({
     labels: [],
     datasets: []
@@ -44,7 +44,6 @@ export const CurrentCasesMap = ({ country }) => {
 
   React.useEffect(() => {
     if (data) {
-      console.info('@JAKE - COUNTRY', country, data);
       const newData = {
         labels: Object.keys(country ? data.timeline.cases : data.cases),
         datasets: [{
@@ -107,8 +106,8 @@ export const CurrentCasesMap = ({ country }) => {
   )
 }
 
-export const CasesWrapper = ({ country }) => {
-  const Charts = React.useMemo(() => <CurrentCasesMap country={country} />, [country]);
+export const CasesWrapper = ({ country, refresh }) => {
+  const Charts = React.useMemo(() => <CurrentCasesMap country={country} refresh={refresh} />, [country, refresh]);
   
   return <React.Fragment>
     {Charts}
