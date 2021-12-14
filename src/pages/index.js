@@ -12,6 +12,9 @@ import Map from "components/Map";
 import Snippet from "components/Snippet";
 import { CasesWrapper } from '../components/CurrentCasesMap';
 import { Select } from '../components/Select';
+import Authors from "../components/authors/Authors";
+import { Button } from "@mui/material";
+import { CasesTables } from "../components/CasesTables";
 
 const LOCATION = {
   lat: 34.0522,
@@ -145,7 +148,7 @@ const IndexPageContent = ({ country, refresh, ...props }) => {
     whenCreated: mapEffect,
   };
 
-  const map = React.useMemo(() => <Map {...mapSettings } />, [country]);
+  const map = React.useMemo(() => <Map {...mapSettings} />, [country]);
   return (
     <Layout pageName="home">
       <Helmet>
@@ -183,6 +186,7 @@ const IndexPageContent = ({ country, refresh, ...props }) => {
         <p>Last Updated: {stats ? friendlyDate(stats?.updated) : '-'} </p>
       </div>
       <CasesWrapper country={country} refresh={refresh} />
+      <CasesTables country={country} />
     </Layout>
   );
 };
@@ -201,12 +205,21 @@ const IndexPage = () => {
     setSelectedCountry30Days(event.target.value);
   }
 
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setRefresh(prev => !prev);
+    }, 1000 * 60 * 60)
+    return () => clearInterval(interval);
+  }, [])
+
   const page = React.useMemo(() => <IndexPageContent country={selectedCountry30Days} refresh={refresh}>
     <Select data={countryList} onChange={onChange} value={selectedCountry30Days} />
   </IndexPageContent>, [selectedCountry30Days, countryList, refresh])
 
   return <React.Fragment>
     {page}
+    
+    <Authors />
   </React.Fragment>;
 }
 export default IndexPage;

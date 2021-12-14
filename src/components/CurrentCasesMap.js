@@ -79,7 +79,7 @@ export const CurrentCasesMap = ({ country, refresh }) => {
       const newCountryData = {
         labels: countries.map(item => item.country),
         datasets: [{
-          label: `Current Cases`,
+          label: `Current Cases by Country`,
           data: countries.map(item => item.cases - item.recovered),
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
