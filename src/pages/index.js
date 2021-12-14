@@ -185,8 +185,10 @@ const IndexPageContent = ({ country, refresh, ...props }) => {
       <div className="tracker-last-updated">
         <p>Last Updated: {stats ? friendlyDate(stats?.updated) : '-'} </p>
       </div>
-      <CasesWrapper country={country} refresh={refresh} />
-      <CasesTables country={country} />
+      <div className="graphs">
+        <CasesWrapper country={country} refresh={refresh} />
+        <CasesTables country={country} />
+      </div>
     </Layout>
   );
 };
