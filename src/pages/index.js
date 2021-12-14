@@ -201,6 +201,14 @@ const IndexPage = () => {
     setSelectedCountry30Days(event.target.value);
   }
 
+  const [refresh, setRefresh] = React.useState(false);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setRefresh(prev => !prev);
+    }, 1000 * 60 * 60)
+    return () => clearInterval(interval);
+  }, [])
+  
   const page = React.useMemo(() => <IndexPageContent country={selectedCountry30Days} refresh={refresh}>
     <Select data={countryList} onChange={onChange} value={selectedCountry30Days} />
   </IndexPageContent>, [selectedCountry30Days, countryList, refresh])
