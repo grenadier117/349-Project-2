@@ -1,0 +1,29 @@
+.container-content {
+  max-width: 100%;
+  padding: 0 1em;
+}
+
+.resources {
+  background-color: rgb(102, 55, 151);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 1em;
+  width: 100%;
+}
+
+.authors {
+  /* padding: 1em; */
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(202, 173, 228);
+}
+
+h2, h3, h4 {
+  margin: 12px;
+}

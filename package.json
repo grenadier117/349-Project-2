@@ -9,6 +9,9 @@
     "url": "https://twitter.com/colbyfayock"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.3",
     "axios": "^0.24.0",
     "chart.js": "^3.6.2",
     "gatsby": "^3.13.0",
@@ -20,6 +23,7 @@
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-source-graphql": "^3.5.0",
     "leaflet": "^1.7.1",
+    "lodash": "^4.17.21",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
