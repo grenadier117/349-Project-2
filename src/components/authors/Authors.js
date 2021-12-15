@@ -14,7 +14,7 @@ export default function Authors() {
           <h4>Rainier Sarmiento</h4>
         </div>
         <div>
-          <h3>Our Project Includes:</h3>
+          <h3>Packages and Data Sources:</h3>
           <h4>
             <a href="https://yarnpkg.com/en/">Yarn</a>
           </h4>
@@ -26,6 +26,9 @@ export default function Authors() {
           </h4>
           <h4>
             <a href="https://www.chartjs.org/">Chart.js</a>
+          </h4>
+          <h4>
+            <a href="https://corona.lmao.ninja">Data source</a>
           </h4>
         </div>
         <div>
